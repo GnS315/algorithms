@@ -21,19 +21,19 @@ class Stack {
     this.stack.push(item)
   }
 
-  pop(item) {
-    this.stack.pop(item)
+  pop() {
+    this.stack.pop()
   }
 
   peek() {
-    return this.stack[this.stack.lenth-1]
+    return this.stack[this.stack.length-1]
   }
 
   isEmpty() {
-    return this.stack.lenth === 0
+    return this.stack.length === 0
   }
 
   size() {
-    return this.stack.lenth
+    return this.stack.length
   }
 }
