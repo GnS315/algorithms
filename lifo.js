@@ -25,7 +25,7 @@ class Stack {
   }
 
   peekBack() {
-    return this.stack[0]
+    return this.stack[this.stack.lenth-1]
   }
 
   isEmpty() {
