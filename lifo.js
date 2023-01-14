@@ -11,6 +11,28 @@
 // Вернуть размер - size
 //
 
-class Stack () => {
+class Stack {
+  constructor() {
+    this.stack = []
+  }
 
+  push(item) {
+    this.stack.push(item)
+  }
+
+  pop(item) {
+    this.stack.pop(item)
+  }
+
+  peekBack() {
+    return this.stack[0]
+  }
+
+  isEmpty() {
+    return this.stack.lenth === 0
+  }
+
+  size() {
+    return this.stack.lenth
+  }
 }
