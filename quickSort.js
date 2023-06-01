@@ -1,27 +1,27 @@
 const quickSort = (array) => {
   // Условие для прекращения рекурсии, в таком случае вернем сам массив
   if (array.length <= 1) {
-    return array
+    return array;
   }
 
   // Ищем индекс для опорной точки
-  const pivotIdx = Math.floor(array.length/2)
+  const pivotIdx = Math.floor(array.length / 2);
   // Значение опорной точки
-  const pivot = array[pivotIdx]
+  const pivot = array[pivotIdx];
 
-  const less = [] // Массив для значений меньше опорного
-  const greater = [] // Массив для значений больше опорного
+  const less = []; // Массив для значений меньше опорного
+  const greater = []; // Массив для значений больше опорного
 
-  for (let i = 0; i< array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     // Пропускаем, если значения индекса равно индексу опорного значения
     if (i === pivotIdx) {
-      continue
+      continue;
     }
     // Делим на два массива со значениями больше и меньше опорного
     if (array[i] < pivot) {
-      less.push(array[i])
+      less.push(array[i]);
     } else {
-      greater.push(array[i])
+      greater.push(array[i]);
     }
   }
   /*
@@ -32,5 +32,5 @@ const quickSort = (array) => {
   * отсортированный массив
   * */
 
-  return [...quickSort(less), pivot, ...quickSort(greater)]
-}
+  return [...quickSort(less), pivot, ...quickSort(greater)];
+};
