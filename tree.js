@@ -91,8 +91,21 @@ class BinaryTree {
   }
 
   // Обход в ширину
-  traverseBFS() {
+  traverseBFS(callback) {
+    const queue = [this.root]
 
+    while(queue.length) {
+      const node = queue.shift()
+      callback(node)
+
+      if (node.left) {
+        queue.push(node.left)
+      }
+
+      if (node.right) {
+        queue.push(node.right)
+      }
+    }
   }
 }
 
